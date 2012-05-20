@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo; Zipfolio - A Responsive Onepage Template &rdquo; Documentation by &ldquo;Louie Jie&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;  Zipfolio - A Responsive Onepage Template &rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 02/05/2012<br>
+					By: louiejie<br>
+					Email: <a href="mailto:louiejiemahusay@gmail.com">louiejiemahusay@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/louiejie">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			<li><a href="#phpCode">PHP Code Explanation</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is a Responsive and an HTML based template. This is minimalist design and is best for personal and portfolio site even a web studio website. A lot of features like gallery, video, flex slider, tabulation, accordion and a many more.</p>
+		<h4><strong>HTML Structure</strong></h4>
+		<img src="assets/images/htmlstructure.png" alt="Image">
+        
+
+
+<p>If you want to create another content area. </p>
+<pre>	
+&lt;div id="IdName" class="content"&gt;...&lt;/div&gt;
+</pre>
+
+<p>Font and color of fonts, font size (for <strong>&lt;body&gt;</strong> style)</p>
+<pre>body { font-family: 'Open Sans', sans-serif; font-size:.8em; width:auto; height:auto; color:#5e5d5d;line-height:22px; background: url(../images/body-bg.png) repeat fixed; }</pre>
+
+<p>If you want to create a columns (in this case 3 columns) </p>
+<pre>	
+&lt;div class="columns"&gt;
+
+&lt;div class="one-third first"&gt;
+...content here...
+&lt;/div&gt;
+
+&lt;div class="one-third"&gt;
+...content here...
+&lt;/div&gt;
+
+&lt;div class="one-third"&gt;
+...content here...
+&lt;/div&gt;
+
+&lt;/div&gt; // end of .columns
+</pre>
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight. See example below:</p>
+
+
+<pre>	
+#wrap #content a {
+	color: #someColor;
+}
+</pre>
+<p>The below css code is more weight than the above</p>
+<pre>	
+#wrap #content .sub_content a {
+	color: #someColor;
+}
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using four CSS files in this theme.</p> 
+
+		<p>The first <strong>(style.css)</strong> file contains all of the specific stylings for the page including the reset styles. </p>  
+<p>Since this template is responsive, I used media queries technology to adapt from any devices screen such as ipad and iphone. </p>
+<h4><strong>1.) For iPad. </strong></h4>
+<pre>@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 767px)  {
+//you may edit or add some styles here.
+...
+}</pre>
+<h4><strong>2.) For iphones or smart phones. </strong></h4>
+<pre>@media handheld and (max-width: 479px), screen and (max-device-width: 479px), screen and ( max-width: 479px)  {
+//you may edit or add some styles here.
+...
+}</pre>
+		
+<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+
+
+
+
+&mdash; The second css file is <strong>tipsy.css</strong> this style is for the tool tips jquery <br>
+&mdash; The third is <strong>flexslider.css</strong> this style is for the slider jquery plugin<br>
+&mdash; The last one is <strong>prettyPhoto.css</strong> this is for the lightbox style<br>
+
+</p>
+
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Below are the javascript files imported.</p>
+		
+		<ol>
+			<li>jquery-1.6.4.min.js</li>
+			<li>custom.js</li>
+			<li>css3-mediaqueries.js</li>
+            <li>jquery.flexslider-min.js</li>
+            <li>jquery.prettyPhoto.js</li>
+            <li>jquery.visualNav.min</li>
+            <li>jquery.isotope.min.js</li>
+            <li>jquery.tipsy.js</li>
+         	<li>jquery.jigowatt.js</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+            <li><strong>FlexSlider</strong>
+<pre>
+$(window).load(function() {
+$('.flexslider').flexslider();
+});
+</pre>
+			</li>
+            <li><strong>Tooltip</strong>
+<pre>
+$(window).load(function() {
+$('a.tip').tipsy({fade: true, gravity: 's'});
+});
+</pre>
+            </li>
+            <li><strong>Accordion</strong>
+<pre>
+$(function() {
+$( "#accordion" ).accordion({
+header: "h4",
+autoHeight: false, 
+});
+});
+</pre>
+            </li>
+            <li><strong>mosaic</strong>
+<pre>
+jQuery(function($){
+$('.circle').mosaic({
+opacity	:0.8
+ });	    
+});
+</pre>
+            </li>
+            <li><strong>Jcarousel</strong>
+<pre>
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+</pre>
+            </li>
+
+			<li><p>I implement a few "tried and true" plugins to create the effects. This plugin is packed, so you won't need to manually edit anything in the file. The only necessary thing to know is how to call the method. For example:</p>
+<strong>PrettyPhoto call the method</strong>
+<pre>// for prettyPhoto lightbox
+$("a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+</pre>
+<p><strong>HTML Code</strong></p>
+<pre>&lt;a href="images/preview/work_1_l.jpg" rel="<strong>prettyPhoto[gallery1]</strong>" title="Image Title Here"&gt;	
+&lt;img src="images/work_1.jpg" alt="Image" /&gt;	
+&lt;/a&gt;	
+</pre>
+
+<p>Just add a value of rel attribute <strong>prettyPhoto[valueName]</strong></p>
+			</li>
+		</ol>
+        
+       
+
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>D) PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've included 1 psd with this theme:</p>
+		
+			<ol>
+				<li>layout.psd</li>
+              
+			</ol>
+		
+		<p>You can find the psd's files on the <strong>psd</strong> folder</p>
+		<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following fonts, lightbox, images, icons or other files as listed.</p>
+		
+		<ul>
+	        <li><a href="http://jquery.com/">jQuery</a> &mdash; for javascript library</li>
+			<li><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a> &mdash; for the lightbox plugin</li>
+            <li><a href="http://onehackoranother.com/projects/jquery/tipsy/">Tipsy</a></li>
+            <li><a href="http://isotope.metafizzy.co/">Isotope jQuery plugin</a></li>
+            <li><a href="http://flex.madebymufffin.com/">Flex Slider</a></li>
+            <li><a href="http://plugins.jquery.com/project/MediaQueries">CSS3 Media Queries</a></li>
+            <li><a href="http://wowmotty.blogspot.com/2010/07/visual-navigation.html">Visual Nav</a></li>
+            <li><a href="http://www.iconsweets2.com/">Iconsweet 2</a> </li>
+           
+            <li>I use <strong>Opensans</strong> for the logo. Visit <a href="http://www.google.com/webfonts#UsePlace:use">here</a> </li>
+            <li>Open Sans font for the body and nav. Visit <a href="http://www.google.com/webfonts#UsePlace:use">here</a></li>
+		</ul>
+		<hr>
+        
+        <h3 id="phpCode"><strong>F) PHP Code Explanation</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Open "<strong>contact.php</strong>" then in the line 8 of the code, you can see $address variable.</p>
+       
+        
+<pre>/*Change this default email to your email address*/
+$address = "louiejiemahusay@gmail.com";
+</pre>
+
+<p><strong><em>Note:</em></strong> Please install the <strong>Apache Server</strong> and <strong>PHP</strong> in order to run the PHP code</p>
+        
+
+         
+        <hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Louie Jie</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
