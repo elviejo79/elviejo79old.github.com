@@ -119,7 +119,7 @@ jQuery(document).ready(function() {
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
 			function initialize() {
-				var latlng = new google.maps.LatLng(8.48333, 124.65000);
+				var latlng = new google.maps.LatLng(22.764751,-102.556217);
 				var settings = {
 					zoom: 15,
 					center: latlng,
@@ -145,7 +145,7 @@ jQuery(document).ready(function() {
 					new google.maps.Point(0,0),
 					new google.maps.Point(65, 50));
 
-				var companyPos = new google.maps.LatLng(8.48333, 124.65000);
+				var companyPos = new google.maps.LatLng(22.764751,-102.556217);
 
 				var companyMarker = new google.maps.Marker({
 					position: companyPos,
@@ -223,12 +223,11 @@ jQuery(document).ready(function() {
         <ul>
           <li><a class="menu" href="#home">Acerca de</a></li>
           <li><a class="menu" href="#week">Semana de Clases</a></li>
-          <li><a class="menu" href="#plan">Plan de Estudios</a></li>
+		<li><a class="menu" href="#perfiles">Perfiles</a></li>          
+		<li><a class="menu" href="#plan">Plan de Estudios</a></li> 	 
           <li><a class="menu" href="#mentores">Mentores</a></li>
-          <li><a class="menu" href="#works">Valores</a></li>
-          <li><a class="menu" href="#gallery">Gallery</a></li>
-		  <li><a class="menu" href="#features">Ubicación</a></li>
-          <li><a class="menu" href="#contact">Contact</a></li>
+          <li><a class="menu" href="#aplicar">Preinscripciones Abiertas</a></li>
+          <li><a class="menu" href="#contact">Contacto</a></li>
           <li class="external"><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
@@ -344,6 +343,63 @@ jQuery(document).ready(function() {
                     </tbody>
                 </table>
 		</div>
+	</div>
+	<div id="perfiles" class="content">
+        <div class="page_title">
+          <h2><span>Perfiles Jag Academy</span></h2>
+        </div>  
+      		<h3>El Programa está hecho para ti</h3>
+		<p> Jag Academy está enfocada en crear gente con habilidades técnicas que le permitan incorporarse al sector de desarrollo de software sin ningún problema, para eso hemos diseñado un Plan de Estudios que te servirá para adquirir los conocimientos y habilidades que el mundo demanda.</p> 
+		<br>
+		<div id="tab">
+		                  <ul class="nav">
+		                      <li class="nav-one"><a href="#perfilIngreso" class="current">Perfil de Ingreso</a></li>
+		                      <li class="nav-two"><a href="#perfilEgreso">Perfil de Egreso</a></li>
+		                      <li class="nav-three"><a href="#competencias">Competencias Adquiridas</a></li>
+		                      <li class="nav-four last"><a href="#descargaTemario">Descarga el Plan de Estudios</a></li>
+		                  </ul>
+		                  <div class="list-wrap">
+
+		                      <ul id="perfilIngreso" >
+		                        <li>Recién egresados de la carrera de ingeniería en sistema, licenciado en informática o carrera afin.</li>
+								<li>Técnico Superior Universitario en Informática (con buen nivel de inglés).</li>
+								<li>Personas con máximo un año de experiencia en ingeniería de software.</li>   
+								<li>Egresados buscando trabajo en el área de ingeniería de software.</li>   
+								<li>Al menos un 70% de inglés en lectura.
+		                      </ul>
+
+		                       <ul id="perfilEgreso" class="hide">
+		                        <li>Capaz de crear una microempresa sobre temas relacionados con ingeniería de software.</li>
+								<li>Capaz de ingresar a las empresas de ingeniería de software como un nivel junior.</li>   
+								<li>Preparado para ingresar a empresas grandes de outsourcing de México.</li>
+		                       </ul>
+
+		                       <div id="competencias" class="hide">
+		                            <ul>
+									<li>Uso especializado en tecnología PHP, JAVA o .NET en la práctica</li>
+									<li>De 5 a 12 libros leídos de ingeniería de software en inglés</li>
+									<li>Asistencia a 12 conferencias con expertos en ingeniería de software</li>
+									<li>Asistencia a 36 pláticas de temas expuestos de ingeniería de software por el coloquio de software</li>
+									<li>De 1 a 3 proyectos reales desarrollados</li>
+									<li>Hábitos de trabajo enfocados en la creación de productos</li>
+									<li>3 clases de ingeniería de software en 3 niveles de profundidad</li>
+									<li>Prácticas de ingeniería de software adquirido por la guía de un mentor</li>
+									<li>Al terminar el programa el egresado podrá certificarse en la tecnología elegida</li>
+									<li>Al menos 2 pláticas frente a colegas de la industria del software impartidas por el propio alumno</li>
+									<li>450 puntos en el TOEFL</li>
+								</ul>
+		                       </div>
+
+		                       <ul id="descargaTemario" class="hide">
+		                                                        <div class="third">
+		                              <img src="images/docto.png" alt="" />
+		                              <span><a href="documents/Plan de Estudios JAG Academy 0.1.pdf" target="_blank">Programa de Jag Academy.</a></span><br>
+		                              <small>Agosto, 2012</small>
+		                          </div>
+		                       </ul>
+		                  </div>
+		              </div>
+
 	</div>
 	<div id="plan" class="content">
         <div class="page_title">
@@ -561,256 +617,16 @@ jQuery(document).ready(function() {
         </div>        
       </div>
       <!-- END: .content -->
-      <div id="works" class="content">
-        <div class="page_title">
-          <h2><span>Portfolio</span></h2>
-        </div>
-        <h3>My work - The Collection of Website and Template Design</h3>
-        <section id="options" class="clearfix">
-          <ul id="filters" class="option-set clearfix" data-option-key="filter">
-            <li><a href="#filter" data-option-value="*">All</a></li>
-            <li>/<a href="#filter" data-option-value=".illustration">Illustration</a></li>
-            <li>/<a href="#filter" data-option-value=".print">Print</a></li>
-            <li>/<a href="#filter" data-option-value=".motion">Motion</a></li>
-            <li>/<a href="#filter" data-option-value=".website">Web</a></li>
-          </ul>
-        </section>
-        <div id="works-container">
-          <div class="element motion mosaic-block views" data-category="motion"> <a href="images/preview/work_1_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_1.jpg" alt="Image" /></div>
-                    <div class="element illustration mosaic-block views" data-category="illustration"> <a href="images/preview/work_2_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_2.jpg" alt="Image" /> </div>
-                    <div class="element motion mosaic-block views" data-category="print"> <a href="images/preview/work_3_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_3.jpg" alt="Image" /> </div>
-                    <div class="element website mosaic-block views" data-category="website"> <a href="images/preview/work_4_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_4.jpg" alt="Image" /> </div>
-                    <div class="element print mosaic-block views" data-category="print"> <a href="images/preview/work_5_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_5.jpg" alt="Image" /> </div>
-                    <div class="element illustration mosaic-block views" data-category="illustration"> <a href="http://vimeo.com/1084537&width=700" rel="prettyPhoto[gallery1" title="Vimeo Video" class="mosaic-overlay"></a><img src="images/work/work_6.jpg" alt="Vimeo Video" /> </div>
-                    <div class="element illustration mosaic-block views" data-category="illustration"> <a href="images/preview/work_7_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_7.jpg" alt="Image" /> </div>
-                    <div class="element motion mosaic-block views" data-category="motion"> <a href="images/preview/work_8_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_8.jpg" alt="Image" /> </div>
-                    <div class="element motion mosaic-block views" data-category="motion"> <a href="images/preview/work_9_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_9.jpg" alt="Image" /> </div>
-                    <div class="element print mosaic-block views" data-category="print"> <a href="images/preview/work_10_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_10.jpg" alt="Image" /> </div>
-                    <div class="element illustration mosaic-block views" data-category="illustration"> <a href="images/preview/work_11_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_11.jpg" alt="Image" /> </div>
-                    <div class="element illustration mosaic-block views" data-category="illustration"> <a href="images/preview/work_12_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_12.jpg" alt="Image" /> </div>
-                    <div class="element motion mosaic-block views" data-category="motion"> <a href="images/preview/work_13_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_13.jpg" alt="Image" /> </div>
-                    <div class="element website mosaic-block views" data-category="website"> <a href="images/preview/work_14_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_14.jpg" alt="Image" /> </div>
-                    <div class="element print mosaic-block views" data-category="print"> <a href="images/preview/work_15_l.jpg" rel="prettyPhoto[gallery1]" title="Image Title Here" class="mosaic-overlay"></a><img src="images/work/work_15.jpg" alt="Image" /> </div>
-        </div>
-        <div class="pagination">
-            <ul>
-                <li><a href="#" class="current">1</a></li>
-                <li><a href="#">2</a></li>
-            </ul>
-            <span>Page 1 of 2</span>
-        </div>
-      </div>
-      <!-- END: .content -->
-      
-      <div id="gallery" class="content">
-        <div class="page_title">
-          <h2><span>Gallery</span></h2>
-        </div>
-         <h3>Gallery - This is the collection of images or pictures from the company.</h3>
-        <div id="rg-gallery" class="rg-gallery">
-          <div class="rg-thumbs"> 
-            <!-- Elastislide Carousel Thumbnail Viewer -->
-            <div class="es-carousel-wrapper">
-              <div class="es-nav"> <span class="es-nav-prev">Previous</span> <span class="es-nav-next">Next</span> </div>
-              <div class="es-carousel">
-                <ul>
-                  <li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/gallery/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/2.jpg" data-large="images/gallery/2.jpg" alt="image02" data-description="A plaintful story from a sistering vale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/3.jpg	" data-large="images/gallery/3.jpg" alt="image03" data-description="A plaintful story from a sistering vale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/4.jpg" data-large="images/gallery/4.jpg" alt="image04" data-description="My spirits to attend this double voice accorded" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/5.jpg" data-large="images/gallery/5.jpg" alt="image05" data-description="And down I laid to list the sad-tuned tale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/6.jpg" data-large="images/gallery/6.jpg" alt="image06" data-description="Ere long espied a fickle maid full pale" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/7.jpg" data-large="images/gallery/7.jpg" alt="image07" data-description="Tearing of papers, breaking rings a-twain" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/8.jpg" data-large="images/gallery/8.jpg" alt="image08" data-description="Storming her world with sorrow's wind and rain" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/9.jpg" data-large="images/gallery/9.jpg" alt="image09" data-description="Upon her head a platted hive of straw" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/10.jpg" data-large="images/gallery/10.jpg" alt="image10" data-description="Which fortified her visage from the sun" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/11.jpg" data-large="images/gallery/11.jpg" alt="image11" data-description="Whereon the thought might think sometime it saw" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/12.jpg" data-large="images/gallery/12.jpg" alt="image12" data-description="The carcass of beauty spent and done" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/13.jpg" data-large="images/gallery/13.jpg" alt="image13" data-description="Time had not scythed all that youth begun" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/14.jpg" data-large="images/gallery/14.jpg" alt="image14" data-description="Nor youth all quit; but, spite of heaven's fell rage" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/15.jpg" data-large="images/gallery/15.jpg" alt="image15" data-description="Some beauty peep'd through lattice of sear'd age" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/16.jpg" data-large="images/gallery/16.jpg" alt="image16" data-description="Oft did she heave her napkin to her eyne" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/17.jpg" data-large="images/gallery/17.jpg" alt="image17" data-description="Which on it had conceited characters" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/18.jpg" data-large="images/gallery/18.jpg" alt="image18" data-description="Laundering the silken figures in the brine" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/19.jpg" data-large="images/gallery/19.jpg" alt="image19" data-description="That season'd woe had pelleted in tears" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/20.jpg" data-large="images/gallery/20.jpg" alt="image20" data-description="And often reading what contents it bears" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/21.jpg" data-large="images/gallery/21.jpg" alt="image21" data-description="As often shrieking undistinguish'd woe" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/22.jpg" data-large="images/gallery/22.jpg" alt="image22" data-description="In clamours of all size, both high and low" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/23.jpg" data-large="images/gallery/23.jpg" alt="image23" data-description="Sometimes her levell'd eyes their carriage ride" /></a></li>
-                  <li><a href="#"><img src="images/thumbs/24.jpg" data-large="images/gallery/24.jpg" alt="image24" data-description="As they did battery to the spheres intend" /></a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- End Elastislide Carousel Thumbnail Viewer --> 
-          </div>
-          <!-- rg-thumbs --> 
-        </div>
-        <!-- rg-gallery --> 
-      </div>
-      <!-- END: .content -->
-      <div id="features" class="content content1">
-      	<div class="page_title">
-          <h2><span>Features</span></h2>
-        </div>
-        <h3>Features - Elements, Image Slider, Video, Tabulation &amp; Pricing.</h3>
-        <h4>Image Slider</h4>
-        <div class="wrapper">
-                <div id="ei-slider" class="ei-slider">
-                    <ul class="ei-slider-large">
-						<li>
-                            <img src="images/featured/slide_1.jpg" alt="image06"/>
-                        </li>
-                        <li>
-                            <img src="images/featured/slide_2.jpg" alt="image01" />
-                        </li>
-                        <li>
-                            <img src="images/featured/slide_3.jpg" alt="image02" />
-                        </li>
-                    </ul><!-- ei-slider-large -->
-                    <ul class="ei-slider-thumbs">
-                        <li class="ei-slider-element">Current</li>
-						<li><a href="#">Slide 6</a><img src="images/featured/slide_1.jpg" alt="thumb06" /></li>
-                        <li><a href="#">Slide 1</a><img src="images/featured/slide_2.jpg" alt="thumb01" /></li>
-                        <li><a href="#">Slide 2</a><img src="images/featured/slide_3.jpg" alt="thumb02" /></li>
-                    </ul><!-- ei-slider-thumbs -->
-                </div><!-- ei-slider -->
-            </div><!-- wrapper -->
-        <h4>Price Table</h4>
-        <table id="pricetable">
-                    <thead>
-                        <tr>
-                            <th class="side">&nbsp;</th>
-                            <th class="choiceA">$1000</th>
-                            <th class="choiceB">$100</th>
-                            <th class="choiceC on">$10</th>
-                            <th class="choiceD">$1</th>
-                            <th class="choiceE">Free</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td class="side">&nbsp;</td>
-                            <td class="choiceA"><a href="#">Choose</a></td>
-                            <td class="choiceB"><a href="#">Choose</a></td>
-                            <td class="choiceC on"><a href="#">Choose</a></td>
-                            <td class="choiceD"><a href="#">Choose</a></td>
-                            <td class="choiceE"><a href="#">Choose</a></td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr>
-                            <td class="side">Number of quarters</td>
-                            <td class="choiceA">4,000</td>
-                            <td class="choiceB">400</td>
-                            <td class="choiceC on">40</td>
-                            <td class="choiceD">4</td>
-                            <td class="choiceE">None</td>
-                        </tr>
-                        <tr>
-                            <td class="side">Number of zeros</td>
-                            <td class="choiceA">3 zeros</td>
-                            <td class="choiceB">2 zeros</td>
-                            <td class="choiceC on">1 zero</td>
-                            <td class="choiceD">No zeros</td>
-                            <td class="choiceE">None</td>
-                        </tr>
-                        <tr>
-                            <td class="side">Checks on this row</td>
-                            <td class="choiceA"><img src="images/accept.png" alt="yes" /></td>
-                            <td class="choiceB"><img src="images/accept.png" alt="yes" /></td>
-                            <td class="choiceC on"><img src="images/accept.png" alt="yes" /></td>
-                            <td class="choiceD"><img src="images/accept.png" alt="yes" /></td>
-                            <td class="choiceE">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="side">Checks on another row</td>
-                            <td class="choiceA"><img src="images/accept.png" alt="yes" /></td>
-                            <td class="choiceB"><img src="images/accept.png" alt="yes" /></td>
-                            <td class="choiceC on">&nbsp;</td>
-                            <td class="choiceD">&nbsp;</td>
-                            <td class="choiceE">&nbsp;</td>
-                        </tr>
-                    </tbody>
-                </table>
-      <h4>Tabulation</h4>
-      <div id="tab">
-                        <ul class="nav">
-                            <li class="nav-one"><a href="#r_blog" class="current">Blog</a></li>
-                            <li class="nav-two"><a href="#archive">Archives</a></li>
-                            <li class="nav-three"><a href="#comment">Comment</a></li>
-                            <li class="nav-four last"><a href="#tag">Tags</a></li>
-                        </ul>
-                        <div class="list-wrap">
-                            <div id="r_blog">
-                                <div class="third">
-                                    <img src="images/flickr/flickr-1.jpg" alt="" />
-                                    <span><a href="#">Learn more Responsive design</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                                <div class="third">
-                                    <img src="images/flickr/flickr-2.jpg" alt="" />
-                                    <span><a href="#">Learn more Responsive design</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                                <div class="third">
-                                    <img src="images/flickr/flickr-3.jpg" alt="" />
-                                    <span><a href="#">Learn more Responsive design</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                                <div class="third">
-                                    <img src="images/flickr/flickr-4.jpg" alt="" />
-                                    <span><a href="#">Learn more Responsive design</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                            </div>
-                             
-                             <ul id="archive" class="hide">
-                                <li><a href="#">December (58)</a></li>
-                                <li><a href="#">November (100)</a></li>
-                                <li><a href="#">October (98)</a></li>
-                                <li><a href="#">September (130)</a></li>
-                             </ul>
-                             
-                             <div id="comment" class="hide">
-                                <div class="third">
-                                    <img src="images/flickr/flickr-5.jpg" alt="" />
-                                    <span><a href="#">Nice Design!</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                                <div class="third">
-                                    <img src="images/flickr/flickr-6.jpg" alt="" />
-                                    <span><a href="#">I like the concept</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                                <div class="third">
-                                    <img src="images/flickr/flickr-7.jpg" alt="" />
-                                    <span><a href="#">Can you make this into wp</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                                <div class="third">
-                                    <img src="images/flickr/flickr-1.jpg" alt="" />
-                                    <span><a href="#">How can integrate the code</a></span><br>
-                                    <small><a href="blog.html">December 28, 2011</a></small>
-                                </div>
-                             </div>
-                             
-                             <ul id="tag" class="hide">
-                                <li><a href="#">jquery</a></li>
-                                <li><a href="#">HTML</a></li>
-                                <li><a href="#">Responsive</a></li>
-                                <li><a href="#">Fluid</a></li>
-                                <li><a href="#">Flexible</a></li>
-                                <li><a href="#">css3</a></li>
-                                <li><a href="#">psd</a></li>
-                                <li><a href="#">Inspiration</a></li>
-                             </ul>
-                        </div>
-                    </div>
-      <h4>Video Post</h4>
-      <div class="video-container">
-            <iframe src="http://player.vimeo.com/video/18439821?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0"></iframe>
-            </div>
-      </div><!-- END: .content -->
+
+
+           	      
+<div id="aplicar" class="content">
+	        <div class="page_title">
+	          <h2><span>Preinscripción</span></h2>
+	        </div>  
+	            <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dG9RZXhKZFpBMExqZW1qWHlXZUU4Y1E6MQ" width="760" height="4494" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>  
+</div>	
+	<!-- END: .content -->  
       <div id="contact" class="content last-content">
         <div class="page_title">
           <h2><span>Contact</span></h2>
